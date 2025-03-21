@@ -67,3 +67,8 @@ const PORT = 你想要的端口号;
 
 - 某些网站可能禁止在iframe中加载，这属于正常现象，是由于这些网站的安全策略设置
 - 建议在现代浏览器中使用本应用（Chrome、Firefox、Edge等） 
+
+
+## NGROK
+ngrok config add-authtoken xxxxxxx
+ngrok http http://localhost:9000

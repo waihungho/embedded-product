@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双面板页面</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+        
+        .left-panel {
+            width: 250px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .right-panel {
+            flex: 1;
+            border: none;
+        }
+        
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .nav-title {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-panel">
+        <div class="nav-title">导航面板</div>
+        <button onclick="changeUrl('https://datacenter.wisersone.com/home/148596')">MC</button>
+    </div>
+    
+    <iframe id="rightFrame" class="right-panel" src=""></iframe>
+
+    <script>
+        function changeUrl(url) {
+            document.getElementById('rightFrame').src = url;
+        }
+    </script>
+</body>
+</html> 
